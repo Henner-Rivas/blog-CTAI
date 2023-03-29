@@ -69,9 +69,23 @@ class EducacionController extends Controller
 
         if ($request->file('file')) {
             $url =  Storage::put('public/posts', $request->file('file'));
-
             $post->image()->create(['url' => $url]);
         }
+
+
+        /*       if ($request->file('pdf')) {
+            $url =  Storage::put('public/posts', $request->file('pdf'));
+            $post->image()->create(['url2' => $url]);
+        } */
+        if ($request->hasFile('pdf')) {
+
+            $url =  Storage::put('public/archivos', $request->file('pdf'));
+
+            $post->image = $url;
+            $post->save();
+        }
+
+
 
         if ($request->tags) {
             $post->tags()->attach($request->tags);

@@ -65,6 +65,15 @@
 
                 </div>
 
+
+                <div>
+
+
+                    <a href=" @if($post->image){{Storage::url($post->image->url2)}} @endif" target="_blank"
+                        class="text-my_blue">
+                        verr</a>
+                </div>
+
             </div>
 
 

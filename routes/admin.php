@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ArchivoController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CommentController;
+use App\Http\Controllers\Admin\ConvocatoriaController;
 use App\Http\Controllers\Admin\EducacionController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\PlanesController;
@@ -29,6 +30,7 @@ Route::resource('roles', RoleController::class)->names('admin.roles');
 Route::resource('sliders', SliderController::class)->names('admin.sliders');
 
 Route::resource('educacion', EducacionController::class)->names('admin.educacion');
+Route::resource('convocatorias', ConvocatoriaController::class)->names('admin.convocatoria');
 
 Route::resource('archivos', ArchivoController::class)->names('admin.archivos');
 Route::resource('comments', CommentController::class)->names('admin.comments');

@@ -44,12 +44,12 @@
         <tbody>
 
 
-            @foreach ($posts as $plane)
+            @foreach ($posts as $educacion)
             <tr class="d-flex justify-content-between">
                 <div>
 
-                    <th scope="row">{{$plane->id}}</th>
-                    <td>{{$plane->name}}</td>
+                    <th scope="row">{{$educacion->id}}</th>
+                    <td>{{$educacion->name}}</td>
 
                 </div>
 
@@ -58,7 +58,7 @@
 
                     <td width="10px">
                         @can('admin.posts.edit')
-                        <a class="btn btn-primary btn-sm" href="{{route('admin.educacion.edit',$plane)}}">
+                        <a class="btn btn-primary btn-sm" href="{{route('admin.educacion.edit',$educacion)}}">
                             Editar
                         </a>
 
@@ -69,7 +69,7 @@
                     <td class="btn" width="10px">
                         @can('admin.posts.destroy')
 
-                        <form action="{{route('admin.educacion.destroy',$plane)}}" method="POST">
+                        <form action="{{route('admin.educacion.destroy',$educacion)}}" method="POST">
                             @csrf
                             @method('delete')
 

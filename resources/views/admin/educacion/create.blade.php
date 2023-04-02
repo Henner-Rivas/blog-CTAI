@@ -9,7 +9,7 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        {!! Form::open(['route' => 'admin.posts.store','autocomplete'=> 'off','files'=> true]) !!}
+        {!! Form::open(['route' => 'admin.educacion.store','autocomplete'=> 'off','files'=> true]) !!}
 
         {!! Form::hidden('user_id', auth()->user()->id) !!}
 
@@ -107,8 +107,8 @@
 
             <div class="col">
                 <div class="form-group">
-                    {!! Form::label('pdf', 'Archivo') !!} <span>(Opcional)</span>
-                    {!! Form::file('pdf', ['class'=> 'form-control-file','accept'=> 'pdf']) !!}
+                    {!! Form::label('file2', 'Archivo') !!} <span>(Opcional)</span>
+                    {!! Form::file('file2', ['class'=> 'form-control-file','accept'=> 'pdf']) !!}
                 </div>
 
                 @error('file')

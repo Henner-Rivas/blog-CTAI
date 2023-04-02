@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePostRequest;
+use App\Models\Archivo;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
@@ -61,36 +62,30 @@ class EducacionController extends Controller
     {
 
 
-        /*         return $request->file('file');
-        */
-
-
-        $post = Post::create($request->all());
+        $educacion = Post::create($request->all());
 
         if ($request->file('file')) {
             $url =  Storage::put('public/posts', $request->file('file'));
-            $post->image()->create(['url' => $url]);
+            $educacion->image()->create(['url' => $url]);
         }
 
+        if ($request->file('file2')) {
+            $url =  Storage::put('public/posts', $request->file('file2'));
 
-        /*       if ($request->file('pdf')) {
-            $url =  Storage::put('public/posts', $request->file('pdf'));
-            $post->image()->create(['url2' => $url]);
-        } */
-        if ($request->hasFile('pdf')) {
+            $archivo = new Archivo;
+            $archivo->url = $url;
 
-            $url =  Storage::put('public/archivos', $request->file('pdf'));
-
-            $post->image = $url;
-            $post->save();
+            $archivo->imageable()->associate($educacion);
+            $archivo->save();
         }
+
 
 
 
         if ($request->tags) {
-            $post->tags()->attach($request->tags);
+            $educacion->tags()->attach($request->tags);
         }
-        return redirect()->route('admin.educacion.edit', $post)->with('info', 'se ha creado el articulo con exito');
+        return redirect()->route('admin.educacion.edit', $educacion)->with('info', 'se ha creado el articulo sobre educación con exito');
     }
 
     /**
@@ -113,12 +108,12 @@ class EducacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $plane)
+    public function edit(Post $educacion)
     {
         $tags = Tag::all();
         $categories = Category::pluck('name', 'id');
 
-        return view('admin.educacion.edit', ['plane' => $plane, 'tags' => $tags, 'categories' => $categories]);
+        return view('admin.educacion.edit', ['educacion' => $educacion, 'tags' => $tags, 'categories' => $categories]);
     }
 
     /**
@@ -128,20 +123,37 @@ class EducacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(StorePostRequest $request, Post $plane)
+    public function update(StorePostRequest $request, Post $educacion)
     {
-        $plane->update($request->all());
+        $educacion->update($request->all());
+
         if ($request->file('file')) {
             $url =  Storage::put('public/posts', $request->file('file'));
-            if ($plane->image) {
-                Storage::delete($plane->image->url);
-                $plane->image->update([
+            if ($educacion->image) {
+                Storage::delete($educacion->image->url);
+                $educacion->image->update([
                     'url' => $url,
                 ]);
             } else {
-                $plane->image()->create([
+                $educacion->image()->create([
                     'url' => $url
                 ]);
+            }
+        }
+        if ($request->file('file2')) {
+            $url =  Storage::put('public/archivos', $request->file('file2'));
+
+            if ($educacion->archivo) {
+                Storage::delete($educacion->archivo->url);
+                $educacion->archivo->update([
+                    'url' => $url,
+                ]);
+            } else {
+                $archivo = new Archivo;
+                $archivo->url = $url;
+
+                $archivo->imageable()->associate($educacion);
+                $archivo->save();
             }
         }
 
@@ -150,9 +162,9 @@ class EducacionController extends Controller
 
 
         if ($request->tags) {
-            $plane->tags()->sync($request->tags);
+            $educacion->tags()->sync($request->tags);
         }
-        return redirect()->route('admin.educacion.edit', ['plane' => $plane, 'tags' => $tags, 'categories' => $categories])->with('info', 'Se ha actualizado con exito');
+        return redirect()->route('admin.educacion.edit', ['educacion' => $educacion, 'tags' => $tags, 'categories' => $categories])->with('info', 'Se ha actualizado con exito');
     }
 
     /**
@@ -161,13 +173,13 @@ class EducacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $plane)
+    public function destroy(Post $educacion)
     {
 
-        if ($plane->image) {
-            Storage::delete($plane->image->url);
+        if ($educacion->image) {
+            Storage::delete($educacion->image->url);
         }
-        $plane->delete();
+        $educacion->delete();
         return redirect()->route('admin.educacion.index')->with('info', 'La articulo se ha eliminado con exito');
     }
 }

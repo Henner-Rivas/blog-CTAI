@@ -40,6 +40,10 @@ class FrontController extends Controller
     {
         return view('pages.show-educacion', ['post' => $post]);
     }
+    public function show_convocatoria(Post $post)
+    {
+        return view('pages.show-convocatoria', ['post' => $post]);
+    }
     public function show_programa(Post $post)
     {
         return view('pages.show-programa', ['post' => $post]);
@@ -103,7 +107,8 @@ class FrontController extends Controller
     }
     public function convocatoria()
     {
-        return view('pages.convocatoria');
+        $posts =   Post::where('category_id', '=', 4)->latest()->paginate(2);
+        return view('pages.convocatoria', ['posts' => $posts]);
     }
     public function contratacion()
     {

@@ -122,14 +122,17 @@
 
 
 @push('js')
-<script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/ckeditor.js"></script>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/ckeditor.js">
+</script>
 
 @endpush
 
 @section('js')
-<script src=" @vite(['public/vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js'])
+<script src="{{@mix('public/vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js')}}
 ">
 </script>
+
 <script>
     $(document).ready( function() {
   $("#name").stringToSlug({

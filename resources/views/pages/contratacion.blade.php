@@ -50,32 +50,53 @@
                 </nav>
             </div>
         </div>
-        <div class="container py-8  mx-7 w-full justify-center flex flex-col md:flex-row items-center">
 
-            <p class="w-full  max-w-[500px] min-w-[400px] text-lg text-justify m-4 ">
-                El objetivo esencial de la Federación de asociaciones de cabildos indígenas del departamento del chocó,
-                es luchar por los derechos e intereses de los pueblos indígenas del chocó, bajo los principios de
-                Unidad, territorio, cultura y autonomía los cuales se desarrollan mediante los siguientes fines.
+        <div class=" py-8  mx-7 max max-w-8xl ">
+            <div class=" max-w-3xl">
+                En cumplimiento de las normas de transparencia y acceso a la información pública Colombia Compra
+                Eficiente pone a disposición de la ciudadanía la siguiente información de contratación
 
-
-                El objetivo esencial de la Federación de asociaciones de cabildos indígenas del departamento del chocó,
-                es luchar por los derechos e intereses de los pueblos indígenas del chocó, bajo los principios de
-                Unidad, territorio, cultura y autonomía los cuales se desarrollan mediante los siguientes fines.
-
-                El objetivo esencial de la Federación de asociaciones de cabildos indígenas del departamento del chocó,
-                es luchar por los derechos e intereses de los pueblos indígenas del chocó, bajo los principios de
-                Unidad, territorio, cultura y autonomía los cuales se desarrollan mediante los siguientes fines.
-
-
-            </p>
-
-            <div>
 
             </div>
+            <div class="justify-center flex flex-col md:flex-row items-center">
 
-            <div class="w-full md:w-[40%] flex justify-center">
-                <img class="w-full object-cover " src="{{Vite::asset('resources/images/mision.jpg') }}" alt="foto">
 
+                <p class="w-full  max-w-[500px] min-w-[400px] md:max-w-[70%] text-lg text-justify m-4 ">
+                    En cumplimiento de las normas de transparencia y acceso a la información pública Colombia Compra
+                    Eficiente pone a disposición de la ciudadanía la siguiente información de contratación
+
+
+                </p>
+
+                <div>
+
+                </div>
+                <div class="flex flex-col w-full  md:w-[30%] justify-center">
+
+
+                    <div class="w-full flex justify-center flex-col items-center ">
+                        <img class="w-full object-cover max-w-[250px]"
+                            src="{{Vite::asset('resources/images/logo.jpeg') }}" alt="foto">
+                        <img class="w-full object-cover max-w-[250px]"
+                            src="{{Vite::asset('resources/images/contratacion.png') }}" alt="foto">
+
+                    </div>
+
+                    <div class="w-full  flex   flex-col justify-center items-center">
+                        <h1> VIGENCIA 2022
+                        </h1>
+                        <a href="" class="text-sm"> PROCESO CONTRACTUAL N° 001
+                        </a>
+                        <a href="" class="text-sm"> PROCESO CONTRACTUAL N° 002
+                        </a>
+                        <a href="" class="text-sm"> PROCESO CONTRACTUAL N° 004
+                        </a>
+                        <a href="" class="text-sm"> PROCESO CONTRACTUAL N° 005
+                        </a>
+                    </div>
+
+
+                </div>
             </div>
 
         </div>

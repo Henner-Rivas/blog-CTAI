@@ -351,16 +351,16 @@ return [
         ],
         [
             'text' => 'Contratación',
-            'url'  => 'admin/educacion',
-            'active' => ['admin/roles*'],
+            'url'  => 'admin/contratacion',
+            'active' => ['admin/contratacion*'],
             'can' =>  'admin.roles.index'
 
 
         ],
         [
             'text' => 'Convocatoria',
-            'url'  => 'admin/educacion',
-            'active' => ['admin/roles*'],
+            'url'  => 'admin/convocatorias',
+            'active' => ['admin/convocatorias*'],
             'can' =>  'admin.roles.index'
 
 

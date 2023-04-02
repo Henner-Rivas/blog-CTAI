@@ -42,23 +42,24 @@
                     <div class="flex gap-2 flex-col">
                         <p>
                             <i class="fa-solid fa-location-pin mr-1 text-my_blue"></i>
-                            NIT: 891680011-0
+                            NIT: 901675220-9
                         </p>
                         <p>
-                            <i class="fa-solid fa-location-pin mr-1 text-my_blue"></i> Carrera 2 # 24A - 32
+                            <i class="fa-solid fa-location-pin mr-1 text-my_blue"></i> Carrera 7 #25 – 80 ALAMEDA REYES
+
                         </p>
                         <p>
                             <i class="fa-solid fa-location-pin mr-1 text-my_blue"></i> Código Postal 270001
                         </p>
                         <p>
                             <i class="fa-solid fa-phone mr-1 text-my_blue"></i>
-                            Teléfono:034 6725731
+                            Teléfono:3102803551- 3146960686.
                         </p>
                         <p>
                             <i class="fa-solid fa-blender-phone mr-1 text-my_blue"></i>
                             Línea gratuita: Próximamente
                         </p>
-                        <p> <i class="fa-regular fa-envelope mr-1 text-my_blue"></i>Email: contacto@quibdo-choco.gov.co
+                        <p> <i class="fa-regular fa-envelope mr-1 text-my_blue"></i>Email: uniontemporal2023@gmail.com
                         </p>
 
 

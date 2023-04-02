@@ -29,19 +29,20 @@ class StorePostRequest extends FormRequest
     {
 
         $post = $this->route()->parameter('post');
-        $plane = $this->route()->parameter('plane');
+        $educacion = $this->route()->parameter('educacion');
 
         $rules = [
             'name' => 'required',
             'slug' => 'required|unique:posts',
             'status' => 'required|in:1,2',
-            'file' => 'image'
+            'file' => 'image',
+            'file2' => ''
 
         ];
         if ($post) {
             $rules['slug'] = 'required|unique:posts,slug,' . $post->id;
-        } else if ($plane) {
-            $rules['slug'] = 'required|unique:posts,slug,' . $plane->id;
+        } else if ($educacion) {
+            $rules['slug'] = 'required|unique:posts,slug,' . $educacion->id;
         }
 
 

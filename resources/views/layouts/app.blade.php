@@ -18,6 +18,8 @@
     <!-- Scripts -->
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.worker.js"></script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')

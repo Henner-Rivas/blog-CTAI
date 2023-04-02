@@ -1,25 +1,27 @@
 <x-app-layout>
-
-    <div class="w-full">
-
-        <div class="imagen-title"
-            style="background-image:url(https://www.eltiempo.com/files/article_main/uploads/2021/02/24/60368f9cc9bda.jpeg)">
+    <div class="min-h-screen">
+        <div class="imagen-title2 "
+            style="background-image:url(http://alianzaagroecologia.redelivre.org.br/files/2016/08/Dia-Internacional-dos-Povos-Indigenas.jpg)">
             <div class="cover pl-[50px]">
                 <h1 class="font-extrabold text-my_blue text-3xl">Consejo Terriorial de Autoridades indigenas del Chocó
                 </h1>
-                <h1 class="text-my_blue text-xl">Convocatoria</h1>
+
+                <h1 class="text-my_blue text-bold text-1xl font-medium">Convocatoria</h1>
+
+
                 <nav class="flex my-4" aria-label="Breadcrumb">
                     <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                        <li class="inline-flex items-center gap-2 text-my_green">
-                            <i class="fa-solid fa-house text-my_green"></i>
-                            <a href="#"
+                        <li class="inline-flex items-center gap-2">
+                            <i class="fa-solid fa-house"></i> <a href="#"
                                 class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
+
+
                             </a>
                         </li>
                         <li class="inline-flex items-center">
 
                             <a href=""
-                                class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
+                                class="inline-flex items-center text-sm font-medium text-white hover:text-blue-600">
 
                                 fedeurema /
                             </a>
@@ -27,70 +29,57 @@
 
                         <li class="inline-flex items-center">
 
-                            <a href="/nuestros-planes"
-                                class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
+                            <a href="/educacion"
+                                class="inline-flex items-center text-sm font-medium text-white hover:text-blue-600">
 
-                                institucional /
+                                Convocatoria /
                             </a>
                         </li>
-                        <li class="inline-flex items-center">
 
-                            <a href="/nuestros-planes"
-                                class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
-
-                                Convocatoria
-                            </a>
-                        </li>
 
 
 
                     </ol>
+
+
                 </nav>
             </div>
+
+
         </div>
-        <div class="container py-8  mx-7 w-full justify-center flex flex-col md:flex-row items-center">
 
-            <p class="w-full  max-w-[500px] min-w-[400px] text-lg text-justify m-4 ">
-                El objetivo esencial de la Federación de asociaciones de cabildos indígenas del departamento del chocó,
-                es luchar por los derechos e intereses de los pueblos indígenas del chocó, bajo los principios de
-                Unidad, territorio, cultura y autonomía los cuales se desarrollan mediante los siguientes fines.
+        <div class="container py-8 my-0 mx-auto max-w-6xl  ">
+            <h1 class="text-2xl font-medium mb-4">Convocatoria</h1>
 
 
-                El objetivo esencial de la Federación de asociaciones de cabildos indígenas del departamento del chocó,
-                es luchar por los derechos e intereses de los pueblos indígenas del chocó, bajo los principios de
-                Unidad, territorio, cultura y autonomía los cuales se desarrollan mediante los siguientes fines.
+            <div class="flex  flex-col gap-4">
 
-                El objetivo esencial de la Federación de asociaciones de cabildos indígenas del departamento del chocó,
-                es luchar por los derechos e intereses de los pueblos indígenas del chocó, bajo los principios de
-                Unidad, territorio, cultura y autonomía los cuales se desarrollan mediante los siguientes fines.
+                @foreach ($posts as $post)
 
+                <div
+                    class="p-6 text-white border relative border-gray-200 rounded-lg shadow  w-full h-[15rem] flex justify-center items-center flex-col bg-slate-500">
+                    <div class=" absolute top-0 left-0  bg-white p-2 rounded-l-md">
+                        <i class="fa-regular fa-calendar text-my_green"></i>
+                        <span class="text-black ">{{$post->created_at}}</span>
+                    </div>
 
-            </p>
+                    <a href="{{route('pages.show-educacion',$post)}}">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight  "> {{$post->name}}
+                        </h5>
+                    </a>
+                    <a href="{{route('pages.show-educacion',$post)}}" class="mb-3 font-normal ">
+                        {!! html_entity_decode(Str::limit($post->extract, 90, '...')) !!}
 
+                    </a>
+
+                </div>
+                @endforeach
+
+            </div>
             <div>
 
+                {{$posts->links()}}
             </div>
-
-            <div class="w-full md:w-[40%] flex justify-center">
-                <img class="w-full object-cover " src="{{Vite::asset('resources/images/mision.jpg') }}" alt="foto">
-
-            </div>
-
         </div>
-
-
-
-        <div class="flex justify-center my-12 flex-col gap-3 items-center">
-            <h1 class="t text-my_green text-4xl font-semibold"> Consejo Terriorial de Autoridades indigenas del Chocó
-            </h1>
-
-            <h2 class="s text-my_red text-2xl">UNIDAD, TERRITORIO, CULTURA Y AUTONOMIA
-
-            </h2>
-
-            <h3 class="text-my_red text-lg"> PROGRAMA ETNOEDUCATIVO “JOSE MELANIO TUNAY” </h3>
-        </div>
-
     </div>
-
 </x-app-layout>

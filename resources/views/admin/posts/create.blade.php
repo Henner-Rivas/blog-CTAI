@@ -15,7 +15,7 @@
 
         <div class="form-group">
             {!! Form::label('name', 'Nombre') !!}
-            {!! Form::text('name', '', ['placeholder'=> 'ingrese nombre' , 'class' => 'form-control']) !!}
+            {!! Form::text('name', null, ['placeholder'=> 'ingrese nombre' , 'class' => 'form-control']) !!}
             @error('name')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -121,7 +121,7 @@
 @endpush
 
 @section('js')
-<script src=" @vite(['public/vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js'])
+<script src="{{@mix('public/vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js')}}
 ">
 </script>
 <script>

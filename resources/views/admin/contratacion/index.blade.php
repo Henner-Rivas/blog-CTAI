@@ -5,9 +5,9 @@
 @section('content_header')
 <div class="d-flex justify-content-between">
 
-    <h1>Lista articulos de educacion</h1>
+    <h1>Lista articulos de contratacion</h1>
     @can('admin.posts.create')
-    <a class=" btn btn-secondary " href="{{route('admin.educacion.create')}}">Crear
+    <a class=" btn btn-secondary " href="{{route('admin.contratacion.create')}}">Crear
         plan</a>
 
     @endcan
@@ -25,7 +25,7 @@
 
 
     <div class="card-header">
-        <form action="{{route('admin.educacion.index')}}" method="GET" class="d-flex">
+        <form action="{{route('admin.contratacion.index')}}" method="GET" class="d-flex">
             <input type="text" class="form-control" value="{{request('search')}}" name="search" placeholder="Buscar">
             <button class="btn btn-primary">Buscar</button>
         </form>
@@ -44,12 +44,12 @@
         <tbody>
 
 
-            @foreach ($posts as $educacion)
+            @foreach ($posts as $contratacion)
             <tr class="d-flex justify-content-between">
                 <div>
 
-                    <th scope="row">{{$educacion->id}}</th>
-                    <td>{{$educacion->name}}</td>
+                    <th scope="row">{{$contratacion->id}}</th>
+                    <td>{{$contratacion->name}}</td>
 
                 </div>
 
@@ -58,7 +58,7 @@
 
                     <td width="10px">
                         @can('admin.posts.edit')
-                        <a class="btn btn-primary btn-sm" href="{{route('admin.educacion.edit',$educacion)}}">
+                        <a class="btn btn-primary btn-sm" href="{{route('admin.contratacion.edit',$contratacion)}}">
                             Editar
                         </a>
 
@@ -69,7 +69,7 @@
                     <td class="btn" width="10px">
                         @can('admin.posts.destroy')
 
-                        <form action="{{route('admin.educacion.destroy',$educacion)}}" method="POST">
+                        <form action="{{route('admin.contratacion.destroy',$contratacion)}}" method="POST">
                             @csrf
                             @method('delete')
 

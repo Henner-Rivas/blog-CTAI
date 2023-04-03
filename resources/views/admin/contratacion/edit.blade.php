@@ -14,13 +14,14 @@
 
 <div class="card">
     <div class="card-body">
-        {!! Form::model($educacion,['route' => ['admin.educacion.update',$educacion],'autocomplete'=> 'off','files'=>
+        {!! Form::model($contratacion,['route' => ['admin.contratacion.update',$contratacion],'autocomplete'=>
+        'off','files'=>
         true,'method'=> 'put',]) !!}
 
         {!! Form::hidden('user_id', auth()->user()->id) !!}
         <div class="form-group">
             {!! Form::label('name', 'Nombre') !!}
-            {!! Form::text(' name', $educacion->name, ['placeholder'=> 'ingrese nombre' , 'class' => 'form-control'])
+            {!! Form::text(' name', $contratacion->name, ['placeholder'=> 'ingrese nombre' , 'class' => 'form-control'])
             !!}
             @error('name')
             <span class="text-danger">{{$message}}</span>
@@ -35,7 +36,7 @@
             <span class="text-danger">{{$message}}</span>
             @enderror
         </div>
-        {!! Form::hidden('category_id', 3) !!}
+        {!! Form::hidden('category_id', 5) !!}
 
 
         <div class="form-group">
@@ -70,9 +71,9 @@
         <div class="row mb-3">
             <div class="col">
                 <div class="img-wrapper">
-                    @if ($educacion->image)
+                    @if ($contratacion->image)
 
-                    <img id="picture" src="{{Storage::url($educacion->image->url)}}" alt="{{$educacion->name}}">
+                    <img id="picture" src="{{Storage::url($contratacion->image->url)}}" alt="{{$contratacion->name}}">
                     @else
                     <img src="" alt="no tiene ">
                     @endif
@@ -110,8 +111,8 @@
             @enderror
         </div>
         <div class="col">
-            @if ($educacion->archivo)
-            <a target="_blank" href="{{Storage::url($educacion->archivo->url)}}">Ver archivo</a>
+            @if ($contratacion->archivo)
+            <a target="_blank" href="{{Storage::url($contratacion->archivo->url)}}">Ver archivo</a>
 
             @else
             <span>No tiene archivo</span>

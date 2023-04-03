@@ -52,17 +52,22 @@
         </div>
 
         <div class=" py-8  mx-7 max max-w-8xl ">
-            <div class=" max-w-3xl">
-
+            <div class=" max-w-3xl ">
+                {!! html_entity_decode($post->extract) !!}
             </div>
             <div class="justify-center flex flex-col md:flex-row items-center">
 
 
                 <p class="w-full  max-w-[500px] min-w-[400px] md:max-w-[70%] text-lg text-justify m-4 ">
-                    En cumplimiento de las normas de transparencia y acceso a la información pública Colombia Compra
-                    Eficiente pone a disposición de la ciudadanía la siguiente información de contratación
 
+                    @if ($post->archivo)
 
+                    <embed src="{{Storage::url($post->archivo->url)}}" type="application/pdf" width="100%"
+                        height="600px" />
+
+                    @endif
+
+                    <a href="{{$post->archivo->url}}">ver</a>
                 </p>
 
                 <div>
@@ -84,9 +89,8 @@
                         </h1>
                         @foreach ($posts as $post)
 
-                        <a href={{route('pages.show-contratacion', ['post'=>$post])}} class="text-sm">
-                            {{$post->name}}</a>
-
+                        <a href={{route('pages.show-contratacion',$post)}} class="text-sm"> {{$post->name}}</a>
+                        </a>
                         @endforeach
 
                     </div>

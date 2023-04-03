@@ -31,7 +31,7 @@
         </div>
         <div class="form-group">
 
-            {!! Form::hidden('category_id', 3) !!}
+            {!! Form::hidden('category_id', 5) !!}
         </div>
 
         <div class="form-group">

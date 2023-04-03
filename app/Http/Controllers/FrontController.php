@@ -31,7 +31,20 @@ class FrontController extends Controller
         $posts = Post::where('status', 2)->where('category_id', '=', 1)->latest()->paginate(8);
         return view('pages.comunicacion', ['posts' => $posts]);
     }
+    public function contratacion()
+    {
 
+
+        $posts = Post::where('status', 2)->where('category_id', '=', 5)->latest()->paginate();
+
+        return view('pages.contratacion', ['posts' => $posts]);
+    }
+    public function show_contratacion(Post $post)
+    {
+        $posts = Post::where('status', 2)->where('category_id', '=', 5)->latest()->paginate();
+
+        return view('pages.show-contratacion', ['post' => $post, 'posts' => $posts]);
+    }
     public function show_comunicacion(Post $post)
     {
         return view('pages.show-comunicacion', ['post' => $post]);
@@ -110,10 +123,7 @@ class FrontController extends Controller
         $posts =   Post::where('category_id', '=', 4)->latest()->paginate(2);
         return view('pages.convocatoria', ['posts' => $posts]);
     }
-    public function contratacion()
-    {
-        return view('pages.contratacion');
-    }
+
     public function estructura()
     {
         return view('pages.estructura');

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,17 +20,16 @@ use Illuminate\Support\Facades\Route;
 Route::controller(FrontController::class)->group(function () {
     Route::get('/', 'index')->name('pages.index');
     Route::get('/posts/{post}', 'show_articulo')->name('posts.show');
-
     Route::get('/searches', 'search')->name('posts.search');
     Route::get('/etiquetas/{tag}', 'tag')->name('posts.tag');
-
     Route::get('/contratacion', 'contratacion')->name('pages.contratacion');
     Route::get('/convocatoria', 'convocatoria')->name('pages.convocatoria');
     Route::get('/vision', 'vision')->name('pages.vision');
     Route::get('/mision', 'mision')->name('pages.mision');
     Route::get('/objetivo', 'objetivo')->name('pages.objetivo');
     Route::get('/comunicacion', 'comunicacion')->name('pages.comunicacion');
-    Route::get('/contactanos', 'contactanos')->name('pages.contactanos');
+
+    Route::get('/contratacion/{post}', 'show_contratacion')->name('pages.show-contratacion');
 
     Route::get('/estructura', 'estructura')->name('pages.estructura');
 
@@ -38,9 +38,13 @@ Route::controller(FrontController::class)->group(function () {
     Route::get('/educacion/{post}', 'show_educacion')->name('pages.show-educacion');
     Route::get('/comunicacion/{post}', 'show_comunicacion')->name('pages.show-comunicacion');
     Route::get('/comment/{post}', 'storeComment')->name('comments.show');
-    Route::get('/programas', 'programas')->name('pages.programas');
-    Route::get('/programas/{post}', 'show_programa')->name('pages.show-programa');
     Route::get('/contador', 'counter')->name('contador');
+});
+
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/contactanos', 'showContactForm')->name('pages.contactanos');
+    Route::get('/contactanos/thankyou', 'showThankYouPage')->name('pages.thankyou');
+    Route::post('/contactanos', 'submitContactForm')->name('contact.submit');
 });
 
 

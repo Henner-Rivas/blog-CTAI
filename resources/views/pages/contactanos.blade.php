@@ -68,7 +68,30 @@
                     o reclamo.
                 </p>
 
-                <form action="" class="shadow-md rounded-md max-w-3xl p-3 bg-white w-full">
+                {{-- <div class="card-body">
+                    {!! Form::open(['route' => 'admin.categories.store']) !!}
+                    <div class="form-group">
+                        {!! Form::label('name', 'Nombre') !!}
+                        {!! Form::text('name', '', ['placeholder'=> 'ingrese nombre' , 'class' => 'form-control']) !!}
+                        @error('name')
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        {!! Form::label('slug', 'Slug') !!}
+                        {!! Form::text('slug', '', ['placeholder'=> 'ingrese nombre' , 'class' =>
+                        'form-control','readonly']) !!}
+                        @error('name')
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Crear </button>
+                    {!! Form::close() !!}
+                </div> --}}
+
+                {{-- <form action="" class="shadow-md rounded-md max-w-3xl p-3 bg-white w-full">
 
                     <div class="mb-6">
                         <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900"> Nombre</label>
@@ -98,7 +121,45 @@
                     <button type="button"
                         class="text-white my-3 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Enviar</button>
 
+                </form> --}}
+                <form method="POST" action="{{ route('contact.submit') }}">
+                    @csrf
+
+                    <div>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" value="{{ old('name') }}" required>
+                        @error('name')
+                        <span class="text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div>
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" value="{{ old('email') }}" required>
+                        @error('email')
+                        <span class="text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div>
+                        <label for="subject">Asunto:</label>
+                        <input type="text" id="subject" name="subject" value="{{ old('subject') }}" required>
+                        @error('subject')
+                        <span class="text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div>
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" required>{{ old('message') }}</textarea>
+                        @error('message')
+                        <span class="text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <button type="submit">Enviar</button>
                 </form>
+
             </div>
 
         </div>

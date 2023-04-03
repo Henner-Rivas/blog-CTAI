@@ -54,13 +54,18 @@ class DatabaseSeeder extends Seeder
         ]);
         Category::create([
             'id' => 3,
-            'name' => 'Planes',
-            'slug' => 'planes'
+            'name' => 'educacion',
+            'slug' => 'educacion'
         ]);
         Category::create([
             'id' => 4,
-            'name' => 'programa',
-            'slug' => 'programa'
+            'name' => 'convocatoria',
+            'slug' => 'convocatoria'
+        ]);
+        Category::create([
+            'id' => 5,
+            'name' => 'contratacion',
+            'slug' => 'contratacion'
         ]);
     }
 }

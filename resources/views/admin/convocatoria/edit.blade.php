@@ -36,7 +36,7 @@
             <span class="text-danger">{{$message}}</span>
             @enderror
         </div>
-        {!! Form::hidden('category_id', 3) !!}
+        {!! Form::hidden('category_id', 4) !!}
 
 
         <div class="form-group">

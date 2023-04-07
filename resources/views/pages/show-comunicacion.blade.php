@@ -68,6 +68,16 @@
             </div>
 
 
+            <div>
+
+
+                @if ($post->archivo)
+
+                <embed src="{{Storage::url($post->archivo->url)}}" type="application/pdf" width="100%" height="600px" />
+
+                @endif
+
+            </div>
 
         </div>
     </div>

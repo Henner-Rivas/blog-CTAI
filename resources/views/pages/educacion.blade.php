@@ -48,7 +48,7 @@
 
         </div>
 
-        <div class="container py-8 my-0 mx-auto max-w-6xl  ">
+        <div class="container py-8 my-0 mx-auto   ">
             <h1 class="text-2xl font-medium mb-4">Educación</h1>
 
 
@@ -57,10 +57,18 @@
                 @foreach ($posts as $post)
 
                 <div
-                    class="p-6 text-white border relative border-gray-200 rounded-lg shadow  w-full h-[15rem] flex justify-center items-center flex-col bg-slate-500">
-                    <div class=" absolute top-0 left-0  bg-white p-2 rounded-l-md">
-                        <i class="fa-regular fa-calendar text-my_green"></i>
-                        <span class="text-black ">{{$post->created_at}}</span>
+                    class="p-6 text-white border bg-my_green border-gray-200 rounded-lg shadow  w-full h-[15rem] flex   flex-col justify-center items-center ">
+                    <div class="flex gap-2 items-center ">
+                        <div class="  top-0 left-0  p-2 rounded-l-md">
+                            <i class="fa-regular fa-calendar text-white"></i>
+                            <span class="text-white ">{{$post->created_at}}</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <i class="fa-regular fa-user text-white"></i>
+                            <span class="text-white ">Admin</span>
+
+                        </div>
+
                     </div>
 
                     <a href="{{route('pages.show-educacion',$post)}}">
@@ -73,6 +81,7 @@
                     </a>
 
                 </div>
+
                 @endforeach
 
             </div>

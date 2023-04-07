@@ -105,6 +105,20 @@
             @enderror
         </div>
 
+        <div class="row mb-3">
+
+            <div class="col">
+                <div class="form-group">
+                    {!! Form::label('file2', 'Archivo') !!} <span>(Opcional)</span>
+                    {!! Form::file('file2', ['class'=> 'form-control-file','accept'=> 'pdf']) !!}
+                </div>
+
+                @error('file')
+                <span class="text-danger">{{$message}}</span>
+                @enderror
+            </div>
+        </div>
+
 
 
 

@@ -64,18 +64,17 @@
         </div>
 
 
-
         <div class="flex justify-center my-12 flex-col gap-3 items-center">
-            <h1 class="t text-my_green text-4xl font-semibold"> Consejo Terriorial de Autoridades indigenas del Chocó
-            </h1>
+            <h1 class="t text-my_green text-4xl font-semibold"> CONSEJO TERRITORIAL DE AUTORIDADES INDIGENAS DEL CHOCO
+                UT
 
+            </h1>
+            <h3 class="text-my_green text-xl"> NIT: 901675220-9
+            </h3>
             <h2 class="s text-my_red text-2xl">UNIDAD, TERRITORIO, CULTURA Y AUTONOMIA
 
             </h2>
 
-            <h3 class="text-my_red text-lg"> PROGRAMA ETNOEDUCATIVO “JOSE MELANIO TUNAY” </h3>
         </div>
-
-    </div>
 
 </x-app-layout>

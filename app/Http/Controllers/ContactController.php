@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactanosMailable;
 use Illuminate\Support\Facades\Mail;
 
 use Illuminate\Http\Request;
@@ -17,27 +18,25 @@ class ContactController extends Controller
     public function submitContactForm(Request $request)
     {
         // Validar los datos del formulario
-        $validatedData = $request->validate([
+        $request->validate([
             'name' => 'required',
             'email' => 'required|email',
             'subject' => 'required',
             'message' => 'required',
         ]);
+        $name = $request->name;
+        $email = $request->email;
+        $subject = $request->subject;
+        $mensaje = $request->message;
+        $correo = new ContactanosMailable($name, $email, $mensaje, $subject);
+        $correo->to('berrio320683@gmail.com');
+        $correo->from($request->email, $request->name);
+        $correo->subject($request->subject);
+        $correo->with('message', $request->message);
 
-        // Enviar el correo electrónico usando los datos del formulario
-        Mail::send('emails.contact', [
-            'name' => $validatedData['name'],
-            'email' => $validatedData['email'],
-            'subject' => $validatedData['subject'],
-            'message' => $validatedData['message'],
-        ], function ($message) {
-            $message->to('berrio320683@gmail.com
-            ', 'Nombre del destinatario')
-                ->subject('Mensaje de contacto');
-        });
+        Mail::send($correo);
 
-        // Redirigir al usuario a la página de agradecimiento
-        return redirect()->route('pages.thankyou');
+        return redirect()->back()->with('mensaje', 'El correo electrónico ha sido enviado correctamente.');
     }
 
 

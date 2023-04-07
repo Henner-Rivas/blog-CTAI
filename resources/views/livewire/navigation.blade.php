@@ -6,7 +6,7 @@
                 {{$fecha_actual->format('Y-m-d')}} : {{$fecha_formateada}}
             </div>
             @auth
-            <div class="flex items-center order-3 text-black" x-data="{open:false}">
+            <div class="flex items-center order-3 text-black relative" x-data="{open:false}">
                 <button type="button" x-on:click="open=true"
                     class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
                     <span class="sr-only">Open user menu</span>
@@ -14,7 +14,7 @@
                 </button>
                 <!-- Dropdown menu -->
                 <div x-show="open" x-on:click.away="open=false"
-                    class="z-50 absolute my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow  top-[80px] right-[0px]"
+                    class="z-50 absolute my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow  top-[30px] right-[0px]"
                     {{-- id="user-dropdown" --}}>
                     <div class="px-4 py-3">
                         <span class="block text-sm text-gray-900 "> {{auth()->user()->name}}</span>
@@ -245,7 +245,7 @@
                 </li>
                 <li>
                     <a href="{{route('pages.educacion')}}"
-                        class="{{request()->routeIs('pages.educacion') ? 'font-bold text-light_green' : '' }} block py-2 pl-3 pr-4  rounded  md:hover:bg-transparent hover:text-light_green md:p-0 hover:font-medium text-gray-700">Educación</a>
+                        class="{{request()->routeIs('pages.educacion') ? 'font-bold text-light_green' : '' }} block py-2 pl-3 pr-4  rounded  md:hover:bg-transparent hover:text-light_green md:p-0 hover:font-medium text-gray-700">Programas</a>
                 </li>
 
                 <li x-data="{openDesple:false}" class="relative">

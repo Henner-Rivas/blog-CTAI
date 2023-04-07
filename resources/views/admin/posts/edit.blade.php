@@ -108,6 +108,23 @@
             <span class="text-danger">{{$message}}</span>
             @enderror
         </div>
+        <div class="col">
+            @if ($post->archivo)
+            <a target="_blank" href="{{Storage::url($post->archivo->url)}}">Ver archivo</a>
+
+            @else
+            <span>No tiene archivo</span>
+            @endif
+
+            <div class="form-group">
+                {!! Form::label('file2', 'Archivo') !!} <span>(Opcional)</span>
+                {!! Form::file('file2', ['class'=> 'form-control-file','accept'=> 'pdf']) !!}
+            </div>
+
+            @error('file')
+            <span class="text-danger">{{$message}}</span>
+            @enderror
+        </div>
 
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePostRequest;
+use App\Models\Archivo;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
@@ -71,6 +72,19 @@ class PostController extends Controller
         }
 
 
+        if ($request->file('file2')) {
+            $url =  Storage::put('public/posts', $request->file('file2'));
+
+            $archivo = new Archivo;
+            $archivo->url = $url;
+
+            $archivo->imageable()->associate($post);
+            $archivo->save();
+        }
+
+
+
+
 
 
         if ($request->tags) {
@@ -130,6 +144,16 @@ class PostController extends Controller
                 ]);
             }
         }
+        if ($request->file('file2')) {
+            $url =  Storage::put('public/posts', $request->file('file2'));
+
+            $archivo = new Archivo;
+            $archivo->url = $url;
+
+            $archivo->imageable()->associate($post);
+            $archivo->save();
+        }
+
         /*         $this->authorize('author', $post);
  */
         $tags = Tag::all();

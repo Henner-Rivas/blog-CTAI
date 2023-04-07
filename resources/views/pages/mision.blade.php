@@ -53,21 +53,14 @@
         <div class="container py-8  mx-7 w-full justify-center flex flex-col md:flex-row items-center">
 
             <p class="w-full  max-w-[500px] min-w-[400px] text-lg text-justify m-4 ">
-                Fortalecer y apoyar en lo político organizativo, pedagógico, económico, cultural y social a las
-                comunidades
-                indígenas del Chocó, pertenecientes a la organización; Y que pusedan asumir el control y defensa de los
-                derechos humanos y colectivos acogiendo los principios rectores del movimiento indígena nacional:
-                Autonomía,
-                Territorio, Cultura y Unidad. El Comité Ejecutivo es el órgano que hace efectivo los mandatos de la
-                política
-                organizativa mediante la construcción de planes de vida enfocado en la construcción de una educación que
-                garantice el buen vivir de la población, con énfasis en la niñez indígena, respetando su cosmogonía
-                propia
-                aplicado a la educación administrada por el estado colombiano.
-                Lograr la canalización de recursos destinados a las comunidades originarias a través de la gestión de
-                proyectos con entidades de la cooperación internacional. Cumplir con la celebración de convenios con
-                entidades públicas y las acciones políticas de hecho.
-
+                El Consejo Territorial de Autoridades Indígenas - UT, es una asociación que participa en el
+                proceso de administración de los sistemas propios de los pueblos indígenas, de conformidad con las
+                disposiciones establecidas en el decreto 1953 de 2014; con la finalidad de garantizar el reconocimiento,
+                la
+                proteccion, ejercicio y goce de los derechos fundamentales de los Pueblos Indígenas, al territorio,
+                autonomía, a la educación indígena propia, salud propia, al agua potable y saneamiento básico, entre
+                otros,
+                en el marco constitucional de respeto y protección a la diversidad étnica y cultural.
             </p>
 
             <div>
@@ -84,14 +77,16 @@
 
 
         <div class="flex justify-center my-12 flex-col gap-3 items-center">
-            <h1 class="t text-my_green text-4xl font-semibold"> Consejo Terriorial de Autoridades indigenas del Chocó
-            </h1>
+            <h1 class="t text-my_green text-4xl font-semibold"> CONSEJO TERRITORIAL DE AUTORIDADES INDIGENAS DEL CHOCO
+                UT
 
+            </h1>
+            <h3 class="text-my_green text-xl"> NIT: 901675220-9
+            </h3>
             <h2 class="s text-my_red text-2xl">UNIDAD, TERRITORIO, CULTURA Y AUTONOMIA
 
             </h2>
 
-            <h3 class="text-my_red text-lg"> PROGRAMA ETNOEDUCATIVO “JOSE MELANIO TUNAY” </h3>
         </div>
 
     </div>

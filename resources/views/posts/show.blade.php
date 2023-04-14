@@ -69,7 +69,8 @@
 
             </div>
 
-            <div class="col-span-3  md:md:col-span-1">
+
+            {{-- <div class="col-span-3  md:md:col-span-1">
                 <h3>Articulos relacionados </h3>
 
                 <div class="flex gap-5 flex-col">
@@ -93,15 +94,15 @@
 
                 </div>
             </div>
+            --}}
 
-
-
+            {{--
             <div class="flex flex-col w-full col-span-2 my-0 mx-auto">
                 @include('comments.show',['list'=> $post->comments,'post'=> $post])
 
 
                 @include('comments.form')
-            </div>
+            </div> --}}
         </div>
     </div>
 </x-app-layout>

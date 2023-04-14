@@ -29,7 +29,7 @@ class ContactController extends Controller
         $subject = $request->subject;
         $mensaje = $request->message;
         $correo = new ContactanosMailable($name, $email, $mensaje, $subject);
-        $correo->to('berrio320683@gmail.com');
+        $correo->to('uniontemporal2023@gmail.com');
         $correo->from($request->email, $request->name);
         $correo->subject($request->subject);
         $correo->with('message', $request->message);

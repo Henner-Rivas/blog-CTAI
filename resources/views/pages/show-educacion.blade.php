@@ -48,7 +48,7 @@
             <h1 class="text-4xl font-semibold text-opacity-20"> {{$post->name}}</h1>
 
 
-            <div class="text-lg text-gray-500 item-detail">
+            <div class="text-lg text-gray-500 item-detail text-justify">
                 {!! html_entity_decode($post->extract) !!}
 
             </div>
@@ -59,7 +59,7 @@
             <div class="col-span-3 md:col-span-2 ">
                 <img class="w-full h-[400px] bg-cover bg-center object-cover"
                     src="@if($post->image){{Storage::url($post->image->url)}} @endif">
-                <div class="text-base text-gray-700  item-detail">
+                <div class="text-[18px] text-gray-700  item-detail text-justify my-5">
                     {!! html_entity_decode($post->body) !!}
 
                 </div>

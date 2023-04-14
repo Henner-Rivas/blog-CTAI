@@ -77,10 +77,9 @@
 
 
                     <div class="w-full flex justify-center flex-col items-center ">
-                        <img class="w-full object-cover max-w-[250px]"
-                            src="{{Vite::asset('resources/images/logo.jpeg') }}" alt="foto">
-                        <img class="w-full object-cover max-w-[250px]"
-                            src="{{Vite::asset('resources/images/contratacion.png') }}" alt="foto">
+                        <img class="w-full object-cover max-w-[250px]" src="{{asset('images/logo.jpeg') }}" alt="foto">
+                        <img class="w-full object-cover max-w-[250px]" src="{{asset('images/contratacion.png') }}"
+                            alt="foto">
 
                     </div>
 

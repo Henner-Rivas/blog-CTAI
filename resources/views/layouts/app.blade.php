@@ -13,13 +13,51 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
-    <link rel="icon" type="image/x-icon" href="{{ Vite::asset('resources/images/logo-escudo.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{asset('images/logo.jpeg') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    {{--
+    <link rel="stylesheet" href="{{ asset('resources/css/app.css') }}">
+    <script src="{{asset('js/app.js')}}">
+        --}}
+    </script>
     <!-- Scripts -->
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
     <script src="https://mozilla.github.io/pdf.js/build/pdf.worker.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    flowbite.init({
+      presets: {
+        tailwind: true,
+      },
+    });
+  });
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                my_red: "#BF0615",
+                light_red: "#A6123A",
+                my_blue:"#02aa5d",
+                light_blue:"#00aff0",
+                light_green:"#a0ca7d",
+                 my_green:"#02aa5d",
+                light_white:"#F2F2F2"              }
+            }
+          }
+        }
+
+    </script>
+
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <script src="{{ asset('js/app.js') }}"></script>
+
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js'])
+    --}}
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')

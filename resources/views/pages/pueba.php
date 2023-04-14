@@ -305,3 +305,32 @@ a:=4*(1+(2-3))
 if (((a+2)>(2*3+1)) or (2*3+1>(1+2*3)) and 10>20)=false then
 print 'se imprime'
 endif */;
+
+/* ecuela de michis */
+
+$escula = array(
+    array(
+        'nombre' => 'Michijose',
+        'ocupacion' => 'Developer',
+        'color' => 'naranga',
+        'comidas' => array('favoritas' => array('Arroz', 'Lasama'))
+    ),
+    array(
+        'nombre' => 'Michihenner',
+        'ocupacion' => 'Developer2 ',
+        'color' => 'naranga2'
+    )
+);
+
+$count =  readline("ingrese cantidad de doniciones");
+
+if ($count >= 100) {
+    echo 'Tu retiro esta en proceso';
+} else {
+    echo 'No puede';
+}
+echo "\n";
+
+$tienda=3;
+
+

@@ -56,8 +56,7 @@
 
 
             <div class="w-full m-5 flex justify-center">
-                <img class="w-full object-cover my-0 mx-auto" src="{{Vite::asset('resources/images/estructura2.png') }}"
-                    alt="foto">
+                <img class="w-full object-cover my-0 mx-auto" src="{{asset('images/estructura2.png') }}" alt="foto">
 
             </div>
 

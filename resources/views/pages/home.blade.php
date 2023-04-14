@@ -5,24 +5,24 @@
 
     <div class="max-w-7xl  mx-auto flex-col flex gap-4 my-5 ">
 
-        <div class="flex gap-5 justify-center flex-wrap">
+        <div class="flex gap-5 justify-center flex-wrap items-center">
 
+            <a href='https://cliente.hostgator.co/sitios-web' target="_blank">
+
+                <img src="{{ asset('images/142.png') }}" alt="">
+
+            </a>
+            <a href="{{route('pages.contactanos')}}">
+                <img src="{{ asset('images/contact.svg') }} " alt="contactanos" class="w-[200px]" alt="">
+
+            </a>
+            <a href="{{route('pages.educacion')}}">
+
+                <img src="{{ asset('images/programa250.png') }}" alt="">
+            </a>
             <a href={{ route('pages.comunicacion') }}>
 
-                <img src="{{ Vite::asset('resources/images/142.png') }}" alt="">
-
-            </a>
-            <a href="">
-                <img src="{{ Vite::asset('resources/images/biblioteca250.png') }} " alt="">
-
-            </a>
-            <a href="">
-
-                <img src="{{ Vite::asset('resources/images/programa250.png') }}" alt="">
-            </a>
-            <a href={{ route('pages.comunicacion') }}>
-
-                <img src="{{ Vite::asset('resources/images/noticia250.png') }}" alt="">
+                <img src="{{ asset('images/noticia250.png') }}" alt="">
             </a>
 
 
@@ -34,17 +34,19 @@
             <div class="flex  flex-col items-center">
 
                 <p class="text-4xl  text-justify">
-                    <strong>Bienvenidos </strong> , somos una federación de asociaciones de cabildos indígenas sin ánimo
-                    de
-                    lucro.
+                    <strong>Bienvenidos </strong> , El Consejo Territorial de Autoridades Indígenas - UT, es una
+                    asociación que participa en el
+                    proceso de administración de los sistemas propios de los pueblos indígenas.
                 </p>
 
                 <div>
-                    <img class="max-w-[300px]" src="{{ Vite::asset('resources/images/logo.jpeg') }}" alt="">
+                    <img class="max-w-[300px]" src="{{ asset('/images/logo.jpeg') }}" alt="">
                 </div>
 
-                <p>Que se constituyó el 11 de noviembre del 2009 ante la cámara de comercio, con su sede principal en la
-                    ciudad de Quibdó, Departamento del chocó en el pacífico colombiano
+                <p>Que se constituyó de conformidad con las
+                    disposiciones establecidas en el decreto 1953 de 2014,; con la finalidad de garantizar el
+                    reconocimiento, la
+                    proteccion, ejercicio y goce de los derechos fundamentales de los Pueblos Indígenas
 
                 </p>
             </div>
@@ -78,10 +80,10 @@
         </h1>
 
         <div class="flex gap-7 flex-wrap max-w-5xl my-0 mx-auto items-center justify-center">
-            <img src="{{ Vite::asset('resources/images/sedchoc.png') }}" calt="" class="rounded-lg">
-            <img src="{{ Vite::asset('resources/images/pacipaz.png') }}" alt="">
-            <img src="{{ Vite::asset('resources/images/onic.png') }}" alt="">
-            <img src="{{ Vite::asset('resources/images/mesapermante.jpg') }}" alt="">
+            <img src="{{ asset('images/sedchoc.png') }}" calt="" class="rounded-lg">
+            <img src="{{ asset('images/pacipaz.png') }}" alt="">
+            <img src="{{ asset('images/onic.png') }}" alt="">
+            <img src="{{ asset('images/mesapermante.jpg') }}" alt="">
         </div>
     </div>
 

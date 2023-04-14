@@ -68,7 +68,7 @@
             </div>
 
             <div class="w-full md:w-[40%] flex justify-center">
-                <img class="w-full object-cover " src="{{Vite::asset('resources/images/mision.jpg') }}" alt="foto">
+                <img class="w-full object-cover " src="{{asset('images/mision.jpg') }}" alt="foto">
 
             </div>
 

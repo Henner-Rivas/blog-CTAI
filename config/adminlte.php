@@ -342,7 +342,7 @@ return [
 
         ],
         [
-            'text' => 'Educacion',
+            'text' => 'Programas ',
             'url'  => 'admin/educacion',
             'active' => ['admin/roles*'],
             'can' =>  'admin.roles.index'

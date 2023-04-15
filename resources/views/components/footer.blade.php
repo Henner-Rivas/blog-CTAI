@@ -122,13 +122,18 @@
         </div>
 
 
-        <div class="h-[40px] bg-my_green text-white   flex  w-full box-border justify-center">
-            <div class="flex w-full justify-center items-center">
-                Copyright © 2023
+        <div class="h-[70px] md:h-[40px] bg-my_green text-white   flex  w-full box-border justify-center">
+            <div class="flex w-full justify-center items-center flex-wrap">
+                <span>
+
+                    Copyright © 2023
+                </span>
                 <a href="https://henner-rivas.vercel.app/" target="_blank" rel="noopener noreferrer"
                     class="ml-2 font-bold">Henner
                     Rivas</a>
-                - Desarrollador web. All Rights Reserved.
+                -
+                <span> Desarrollador web. All Rights Reserved. </span>
+
 
             </div>
         </div>

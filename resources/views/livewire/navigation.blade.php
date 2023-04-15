@@ -45,11 +45,12 @@
 
 
                                     <a href="{{ route('logout') }}"
-                                        class="block px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-light_green  hover:text-white font-medium "
+                                        class="block px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-light_red  hover:text-white font-medium "
                                         @click.prevent="$root.submit();">Cerrar session</a>
                                 </form>
 
                             </li>
+
                         </ul>
                     </div>
                 </div>
@@ -432,7 +433,7 @@
                             class="{{request()->routeIs('pages.educacion') ? 'font-bold text-light_green' : '' }} block py-2 pl-3 pr-4  rounded  md:hover:bg-transparent hover:text-light_green md:p-0 hover:font-medium text-gray-700">Programas</a>
                     </li>
 
-                    <li x-data="{openDesple:false}" class="relative">
+                    <li {{-- x-data="{openDesple:false}" --}} class="relative">
                         <div x-on:click="openDesple=true" id="mega-menu-icons-dropdown-button2"
                             data-dropdown-toggle="mega-menu-icons-dropdown2"
                             class=" py-2 pl-3 pr-4 flex cursor-pointer items-center hover:font-medium  text-gray-700 rounded  md:hover:bg-transparent hover:text-light_green md:p-0  ">
@@ -445,8 +446,9 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </div>
-                        <div x-show="openDesple" x-on:click.away="openDesple=false" id="mega-menu-icons-dropdown2"
-                            class="z-40 hidden  font-normal bg-white divide-y absolute divide-gray-100 rounded shadow w-44 ">
+                        <div {{-- x-show="openDesple" x-on:click.away="openDesple=false" --}}
+                            id="mega-menu-icons-dropdown2"
+                            class="z-50 hidden  font-normal bg-white divide-y absolute divide-gray-100 rounded shadow w-44 ">
                             <ul class="py-1 text-sm text-gray-700  " aria-labelledby="mega-menu-icons-dropdown-button2">
 
 

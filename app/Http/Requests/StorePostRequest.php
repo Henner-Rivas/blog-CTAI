@@ -31,6 +31,7 @@ class StorePostRequest extends FormRequest
         $post = $this->route()->parameter('post');
         $educacion = $this->route()->parameter('educacion');
         $contratacion = $this->route()->parameter('contratacion');
+        $convocatoria = $this->route()->parameter('convocatoria');
 
         $rules = [
             'name' => 'required',
@@ -46,6 +47,8 @@ class StorePostRequest extends FormRequest
             $rules['slug'] = 'required|unique:posts,slug,' . $educacion->id;
         } else if ($contratacion) {
             $rules['slug'] = 'required|unique:posts,slug,' . $contratacion->id;
+        } else if ($convocatoria) {
+            $rules['slug'] = 'required|unique:posts,slug,' . $convocatoria->id;
         }
 
 

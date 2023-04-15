@@ -5,7 +5,7 @@
 @section('content_header')
 <div class="d-flex justify-content-between">
 
-    <h1>Lista articulos de educacion</h1>
+    <h1>Lista articulos de programas</h1>
     @can('admin.posts.create')
     <a class=" btn btn-secondary " href="{{route('admin.educacion.create')}}">Crear
         plan</a>

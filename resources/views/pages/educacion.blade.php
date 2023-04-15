@@ -6,7 +6,7 @@
                 <h1 class="font-extrabold text-my_blue text-3xl">Consejo Terriorial de Autoridades indigenas del Chocó
                 </h1>
 
-                <h1 class="text-my_blue text-bold text-1xl font-medium">Educación</h1>
+                <h1 class="text-my_blue text-bold text-1xl font-medium">Programas</h1>
 
 
                 <nav class="flex my-4" aria-label="Breadcrumb">
@@ -32,7 +32,7 @@
                             <a href="/educacion"
                                 class="inline-flex items-center text-sm font-medium text-white hover:text-blue-600">
 
-                                educación /
+                                Programas /
                             </a>
                         </li>
 
@@ -49,7 +49,7 @@
         </div>
 
         <div class="container py-8 my-0 mx-auto   ">
-            <h1 class="text-2xl font-medium mb-4">Educación</h1>
+            <h1 class="text-2xl font-medium mb-4">Programas</h1>
 
 
             <div class="flex  flex-col gap-4">

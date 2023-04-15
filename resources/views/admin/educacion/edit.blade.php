@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-<h1>editar articulo</h1>
+<h1>editar articulo programa</h1>
 @stop
 
 @section('content')
@@ -144,20 +144,12 @@
 @endpush
 
 @section('js')
-<script src=" @vite(['public/vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js'])
-">
+<script src="{{asset('vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js') }}" ">
 </script>
 <script>
     $(document).ready( function() {
-  $("#name").stringToSlug({
-    setEvents: 'keyup keydown blur',
-    getPut: '#slug',
-    space: '-'
-  });
-});
-</script>
-
-<script>
+  $(" #name").stringToSlug({ setEvents: 'keyup keydown blur' , getPut: '#slug' , space: '-' }); }); </script>
+    <script>
     document.getElementById('file').addEventListener('change', cambiarImagen)
 
     function cambiarImagen(e) {

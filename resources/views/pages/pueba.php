@@ -331,6 +331,11 @@ if ($count >= 100) {
 }
 echo "\n";
 
-$tienda=3;
+$tienda = 3;
 
 
+$contador = 0;
+
+while ($contador < 10) {
+    echo $contador . "\n";
+}

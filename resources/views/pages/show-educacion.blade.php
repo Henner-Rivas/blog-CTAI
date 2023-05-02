@@ -20,7 +20,7 @@
                     <a href="/educacion"
                         class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
 
-                        Programa
+                        Educación
                     </a>
                 </li>
                 <li>

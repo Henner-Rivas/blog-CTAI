@@ -1,4 +1,4 @@
-<?php
+<?php
 $count =  readline("ingrese cantidad de doniciones");
 
 if ($count >= 100) {

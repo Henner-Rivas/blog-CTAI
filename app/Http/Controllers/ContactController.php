@@ -15,6 +15,12 @@ class ContactController extends Controller
         return view('pages.contactanos');
     }
 
+    /**
+     * funcion que recibe los datos del formulario y los envia al correo
+     *
+     * @param  mixed $request
+     * @return void
+     */
     public function submitContactForm(Request $request)
     {
         // Validar los datos del formulario

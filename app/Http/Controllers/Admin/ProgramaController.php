@@ -11,6 +11,9 @@ use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
+/**
+ * Clase que se encarga de gestionar la pagina de los programas
+ */
 class ProgramaController extends Controller
 {
     /**

@@ -117,6 +117,14 @@
             </div>
         </div>
 
+        <div class="form-group">
+            {!! Form::label('vigencia', 'Vigencia') !!}
+            {!! Form::select('vigencia', ['2023' => '2023','2024' => '2024', '2025' => '2025' ], null, ['placeholder' => 'Seleccione una opción', 'class' => 'form-control']) !!}
+            @error('vigencia')
+            <span class="text-danger">{{$message}}</span>
+            @enderror
+        </div>
+
 
 
 

@@ -34,6 +34,8 @@
                             </li>
                             @endcan
 
+
+
                             <li>
                                 <a href="{{route('profile.show')}}"
                                     class="block px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-light_green  hover:text-white font-medium ">Configuración</a>
@@ -41,17 +43,13 @@
 
                             <li>
                                 <form method="POST" action="{{ route('logout') }}" x-data>
-                                    {{method_field('post')}}
-
                                     @csrf
-
-
-                                    <a href="{{ route('logout') }}"
-                                        class="block px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-light_red  hover:text-white font-medium "
-                                        @click.prevent="$root.submit();">Cerrar session</a>
+                                    <button type="submit" class="block px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-light_red hover:text-white font-medium">
+                                        Cerrar sesión
+                                    </button>
                                 </form>
-
                             </li>
+
                         </ul>
                     </div>
                 </div>

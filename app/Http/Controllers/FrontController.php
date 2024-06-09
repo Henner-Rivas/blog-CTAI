@@ -37,14 +37,26 @@ class FrontController extends Controller
 
         $posts = Post::where('status', 2)->where('category_id', '=', 5)->latest()->paginate();
 
-        return view('pages.contratacion', ['posts' => $posts]);
-    }
+        $posts2023 =   Post::where('status', 2)->where('category_id', '=', 5)->where('vigencia', '=', '2023')->latest()->paginate();
+        $posts2024 =   Post::where('status', 2)->where('category_id', '=', 5)->where('vigencia', '=', '2024')->latest()->paginate();
+        $posts2025 =   Post::where('status', 2)->where('category_id', '=', 5)->where('vigencia', '=', '2025')->latest()->paginate();
+
+        return view('pages.contratacion', ['posts2023' => $posts2023,'posts2024' => $posts2024,'posts2025' => $posts2025]);
+
+/*         return view('pages.contratacion', ['posts' => $posts]);
+ */    }
     public function show_contratacion(Post $post)
     {
-        $posts = Post::where('status', 2)->where('category_id', '=', 5)->latest()->paginate();
 
-        return view('pages.show-contratacion', ['post' => $post, 'posts' => $posts]);
-    }
+
+        $posts2023 =   Post::where('status', 2)->where('category_id', '=', 5)->where('vigencia', '=', '2023')->latest()->paginate();
+        $posts2024 =   Post::where('status', 2)->where('category_id', '=', 5)->where('vigencia', '=', '2024')->latest()->paginate();
+        $posts2025 =   Post::where('status', 2)->where('category_id', '=', 5)->where('vigencia', '=', '2025')->latest()->paginate();
+
+        return view('pages.show-contratacionn', ['posts2023' => $posts2023,'posts2024' => $posts2024,'posts2025' => $posts2025,'post' => $post]);
+
+/*         return view('pages.show-contratacion', ['post' => $post, 'posts' => $posts]);
+ */    }
     public function show_comunicacion(Post $post)
     {
         return view('pages.show-comunicacion', ['post' => $post]);

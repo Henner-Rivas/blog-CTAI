@@ -23,7 +23,7 @@
                             <a href=""
                                 class="inline-flex items-center text-sm font-medium text-white hover:text-blue-600">
 
-                                fedeurema /
+                                Inicio/
                             </a>
                         </li>
 

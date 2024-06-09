@@ -126,7 +126,7 @@
             <div class="flex w-full justify-center items-center flex-wrap">
                 <span>
 
-                    Copyright © 2023
+                    Copyright ©  2024
                 </span>
                 <a href="https://henner-rivas.vercel.app/" target="_blank" rel="noopener noreferrer"
                     class="ml-2 font-bold">Henner

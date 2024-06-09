@@ -23,7 +23,7 @@
                             <a href=""
                                 class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
 
-                                fedeurema /
+                                Inicio/
                             </a>
                         </li>
 
@@ -67,7 +67,7 @@
 
                     @endif
 
-                    <a href="{{$post->archivo->url}}">ver</a>
+                    <a href="{{ optional($post->archivo)->url }}">ver</a>
                 </p>
 
                 <div>
@@ -83,16 +83,59 @@
 
                     </div>
 
-                    <div class="w-full  flex   flex-col justify-center items-center">
-                        <h1> VIGENCIA 2022
-                        </h1>
-                        @foreach ($posts as $post)
+                    @if ($posts2023->count() > 0)
 
-                        <a href={{route('pages.show-contratacion',$post)}} class="text-sm"> {{$post->name}}</a>
-                        </a>
+                    <div class="w-full  flex   flex-col justify-center items-center">
+                        <h1 class="font-medium"> VIGENCIA 2023
+                        </h1>
+
+                        @foreach ($posts2023 as $post)
+
+                        <a href={{route('pages.show-contratacion', ['post'=>$post])}} class="text-sm">
+                            {{$post->name}}</a>
+
                         @endforeach
 
                     </div>
+                    @endif
+                    <br/>
+
+
+
+                    @if ($posts2024->count() > 0)
+
+                    <div class="w-full  flex   flex-col justify-center items-center">
+                        <h1 class="font-medium"> VIGENCIA 2024
+                        </h1>
+
+                        @foreach ($posts2024 as $post)
+
+                        <a href={{route('pages.show-contratacion', ['post'=>$post])}} class="text-sm">
+                            {{$post->name}}</a>
+
+                        @endforeach
+
+                    </div>
+                    @endif
+
+
+                    @if ($posts2025->count() > 0)
+
+                    <div class="w-full  flex   flex-col justify-center items-center">
+                        <h1 class="font-medium"> VIGENCIA 2025
+                        </h1>
+
+                        @foreach ($posts2025 as $post)
+
+                        <a href={{route('pages.show-contratacion', ['post'=>$post])}} class="text-sm">
+                            {{$post->name}}</a>
+
+                        @endforeach
+
+                    </div>
+                    @endif
+
+
 
 
                 </div>
